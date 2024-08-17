@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+                                 http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd" version="2.2">
+    <persistence-unit name="dtb">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- Định nghĩa các entity class của bạn -->
+       
+        <!-- Các thuộc tính cấu hình cho Hibernate và JPA -->
+        <properties>
+            <!-- Driver JDBC cho SQL Server -->
+            <property name="javax.persistence.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>
+            <!-- URL kết nối đến SQL Server -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlserver://localhost:1433;databaseName=QUANLYNV;encrypt=true;trustServerCertificate=true"/>
+            <!-- Tên người dùng và mật khẩu để kết nối -->
+            <property name="javax.persistence.jdbc.user" value="sa"/>
+            <property name="javax.persistence.jdbc.password" value="123123"/>
+            <!-- Dialect của SQL Server -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect"/>
+            <!-- Hiển thị các câu lệnh SQL được tạo ra trong console -->
+            <property name="hibernate.show_sql" value="false"/>
+            <!-- Tự động tạo và cập nhật cấu trúc cơ sở dữ liệu <property name="hibernate.hbm2ddl.auto" value="update"/> -->
+
+        </properties>
+    </persistence-unit>
+</persistence>
+
